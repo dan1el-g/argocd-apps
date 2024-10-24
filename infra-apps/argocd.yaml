@@ -15,7 +15,7 @@ spec:
   source:
     repoURL: https://github.com/dan1el-g/argocd-apps.git
     targetRevision: main
-    path: infra
+    path: argocd
   syncPolicy:
     automated:
       prune: true
