@@ -1,12 +1,12 @@
 apiVersion: v2
-name: kubernetes-dashboard
-description: A Helm chart for a kubernetes-dashboard
+name: argocd
+description: A Helm chart for a argocd
 
 type: application
 
 version: 0.0.1
 
 dependencies:
-  - name: kubernetes-dashboard
-    version: 7.10.0
-    repository: https://kubernetes.github.io/dashboard/
+  - name: argo-cd
+    version: 7.6.12
+    repository: https://argoproj.github.io/argo-helm
