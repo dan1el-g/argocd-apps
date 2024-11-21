@@ -7,3 +7,4 @@ kubernetes-dashboard:
         - k3s-test
       tls:
         enabled: false
+      ingressClassName: traefik
