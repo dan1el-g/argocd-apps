@@ -5,3 +5,5 @@ kubernetes-dashboard:
       enabled: true
       hosts:
         - k3s-test
+      tls:
+        enabled: false
