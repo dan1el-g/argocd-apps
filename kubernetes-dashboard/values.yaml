@@ -7,3 +7,6 @@ kubernetes-dashboard:
         - k3s-test
       ingressClassName: traefik
       useDefaultAnnotations: false
+      annotations: 
+        traefik.ingress.kubernetes.io/service.serversscheme: https
+        traefik.ingress.kubernetes.io/service.serverstransport: kubernetes-dashboard@file
