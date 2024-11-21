@@ -1,0 +1,7 @@
+---
+kubernetes-dashboard:
+  app:
+    ingress:
+      enabled: true
+      hosts:
+        - k3s-test
