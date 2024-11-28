@@ -1,13 +1,13 @@
----
-apiVersion: cert-manager.io/v1
-kind: Certificate
-metadata:
-  name: argocd-certificate
-  namespace: cert-manager
-spec:
-  secretName: cloudflare-api-token-secret
-  issuerRef:
-    name: cloudflare-clusterissuer
-    kind: Issuer
-  dnsNames:
-    - argocd.grubis.cloud
+# ---
+# apiVersion: cert-manager.io/v1
+# kind: Certificate
+# metadata:
+#   name: argocd-certificate
+#   namespace: cert-manager
+# spec:
+#   secretName: cloudflare-api-token-secret
+#   issuerRef:
+#     name: cloudflare-issuer
+#     kind: Issuer
+#   dnsNames:
+#     - argocd.grubis.cloud
