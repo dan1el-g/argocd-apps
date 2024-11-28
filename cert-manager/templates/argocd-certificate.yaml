@@ -8,6 +8,6 @@ spec:
   secretName: cloudflare-api-token-secret
   issuerRef:
     name: cloudflare-clusterissuer
-    kind: ClusterIssuer
+    kind: Issuer
   dnsNames:
     - argocd.grubis.cloud
