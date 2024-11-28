@@ -11,4 +11,4 @@ spec:
             email: danigru@t-online.de
             apiTokenSecretRef:
               name: cloudflare-api-token-secret
-              key: api-token 
+              key: api-token
