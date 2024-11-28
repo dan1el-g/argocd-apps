@@ -1,0 +1,8 @@
+  # global:
+  #   domain: argocd.grubis.cloud
+  
+  # # Argo CD server ingress configuration
+  # ingress:
+  #   # -- Enable an ingress resource for the Argo CD server
+  #   enabled: true
+  #   tls: true

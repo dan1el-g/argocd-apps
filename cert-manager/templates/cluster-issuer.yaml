@@ -5,13 +5,10 @@ metadata:
   name: cloudflare-clusterissuer
 spec:
   acme:
-    email: danigru@t-online.de
-    server: https://acme-v02.api.letsencrypt.org/directory
-    privateKeySecretRef:
-      name: cloudflare-clusterissuer-account-key
     solvers:
       - dns01:
           cloudflare:
+            email: danigru@t-online.de
             apiTokenSecretRef:
               name: cloudflare-api-token-secret
               key: api-token 
