@@ -1,3 +1,4 @@
+---
 apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
@@ -13,5 +14,14 @@ spec:
         - name: argocd-server
           port: 443
           scheme: https
+          serversTransport: argocd-server-tls-backend
   tls:
     secretName: letsencrypt-argocd-certificate
+
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: ServersTransport
+metadata:
+  name: argocd-server-tls-backend
+spec:
+  insecureSkipVerify: true
