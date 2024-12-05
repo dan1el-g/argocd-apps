@@ -1,0 +1,27 @@
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: dashboard-server
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - kind: Rule
+      match: Host(`dashboard.grubis.cloud`)
+      priority: 10
+      services:
+        - name: kubernetes-dashboard-kong-proxy
+          port: 443
+          scheme: https
+          serversTransport: dashboard-server-tls-backend
+  tls:
+    secretName: letsencrypt-dashboard-certificate
+
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: ServersTransport
+metadata:
+  name: dashboard-server-tls-backend
+spec:
+  insecureSkipVerify: true

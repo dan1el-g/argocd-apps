@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: letsencrypt-dashboard-certificate
+spec:
+  dnsNames:
+  - dashboard.grubis.cloud
+  issuerRef:
+    group: cert-manager.io
+    kind: ClusterIssuer
+    name: letsencrypt
+  secretName: letsencrypt-dashboard-certificate
