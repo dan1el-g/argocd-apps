@@ -1,11 +1,12 @@
 argo-cd:
-  ingress:
-    enabled: true
-    annotations:
-      cert-manager.io/cluster-issuer: letsencrypt-prod
-    ingressClassName: traefik
-    hostname: argocd.grubis.cloud
-    extraTls:
-      - secretName: letsencrypt-argocd-certificate
-        hosts:
-          - argocd.grubis.cloud
+  server:
+    ingress:
+      enabled: true
+      annotations:
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+      ingressClassName: traefik
+      hostname: argocd.grubis.cloud
+      extraTls:
+        - secretName: letsencrypt-argocd-certificate
+          hosts:
+            - argocd.grubis.cloud
