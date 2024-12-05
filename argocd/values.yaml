@@ -2,6 +2,7 @@ argo-cd:
   server:
     ingress:
       enabled: true
+      https: false
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt-prod
       ingressClassName: traefik
