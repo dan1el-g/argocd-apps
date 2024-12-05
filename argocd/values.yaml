@@ -1,8 +1,11 @@
-  # global:
-  #   domain: argocd.grubis.cloud
-  
-  # # Argo CD server ingress configuration
-  # ingress:
-  #   # -- Enable an ingress resource for the Argo CD server
-  #   enabled: true
-  #   tls: true
+argocd:
+  ingress:
+    enabled: true
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt-prod
+    ingressClassName: traefik
+    hostname: argocd.grubis.cloud
+    extraTls:
+      - secretName: letsencrypt-argocd-certificate
+        hosts:
+          - argocd.grubis.cloud

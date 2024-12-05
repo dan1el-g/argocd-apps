@@ -1,2 +1,2 @@
-crds:
-  enabled: false
+cert-manager:
+  installCRDs: true
